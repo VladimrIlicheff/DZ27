@@ -1,28 +1,42 @@
-﻿Задача 24: Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
+﻿/*Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+452 -> 11
+82 -> 10
+9012 -> 12 */
+/*Задача 24: Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
 7 -> 28
 4 -> 10
 8 -> 36
 */
 
 //метод который получает число с консоли
-int GetNumber(string message)
-{
-Console.WriteLine(message);
-int result = int.Parse(Console.ReadLine());
-return result;
-}
+//ЧИсло цифр
 
-int GetSumm(int a)
+/*void getNumber()
 {
+Console.WriteLine("Введите число ");
+int number = int.Parse(Console.ReadLine()!);
+string numAsString = number.ToString();
+
+int length = numAsString.Length;
+
+Console.WriteLine($"{length}");
+}
+getNumber();*/
+
+
+
+Console.WriteLine("Введите число");
+
+int number = int.Parse(Console.ReadLine()!);
+int count = 0;
 int summ = 0;
-for (int i = 1; i <= a; i++)
+
+while (number > 0)
+
 {
-summ += i;
+    count = count + 1;
+    number = number % 10;
+    summ = summ + number;
 }
-return summ;
-}
+Console.WriteLine($"Кол-во цифр в числе {summ}");
 
-int a = GetNumber("Введите число А:");
-int summ = GetSumm(a);
-
-Console.WriteLine($"Сумма чисел от 1 до {a} = {summ}");
