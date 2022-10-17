@@ -30,12 +30,14 @@ Console.WriteLine("Введите число");
 int number = int.Parse(Console.ReadLine()!);
 int count = 0;
 int summ = 0;
+int number1 =0;
 
-while (number>10)
+while (number > 0)
 {
     count = count + 1;
-    number = number % 10;
-    summ = summ + number;
+    number1 = number % 10;
+    number = number/10;
+    summ = summ + number1;
 }
-Console.WriteLine($"итого {number}");
+Console.WriteLine($"итого {summ}");
 
