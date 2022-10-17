@@ -31,12 +31,12 @@ int number = int.Parse(Console.ReadLine()!);
 int count = 0;
 int summ = 0;
 
-while (number > 0)
+while (number)
 
 {
     count = count + 1;
     number = number % 10;
     summ = summ + number;
 }
-Console.WriteLine($"Кол-во цифр в числе {summ}");
+Console.WriteLine($"итого {summ}");
 
